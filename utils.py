@@ -1,7 +1,21 @@
 
 import numpy as np
 
+from torch.utils.data import Dataset
 from skimage.util.shape import view_as_windows
+
+
+class FaultsDataset(Dataset):
+
+    def __init__(self, imgs):
+        self.imgs = imgs
+
+    def __len__(self):
+        return len(self.imgs)
+
+    def __getitem__(self, idx):
+        img = self.imgs[idx]
+        return img
 
 
 def normalize_seismic_data(seismic):
