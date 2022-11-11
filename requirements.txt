@@ -1,0 +1,7 @@
+scipy
+numpy
+cmapy
+matplotlib
+scikit-image
+torchsummary
+opencv-python
